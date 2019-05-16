@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <water-container v-model="stdIn"></water-container>
+    <div>
+      Input:
+      <input v-model="stdIn" type="number"> 
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import WaterContainer from './components/WaterContainer'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    WaterContainer
+  },
+  data () {
+    return {
+      stdIn: '0214343000'
+    }
   }
 }
 </script>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: grid;
+  height: 100%;
+  width: 100%;
+
+  grid-template-rows: 1fr auto;
+  grid-gap: 10px;
 }
 </style>
