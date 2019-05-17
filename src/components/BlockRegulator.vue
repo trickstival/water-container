@@ -8,8 +8,7 @@
                     @input="rangeInput($event.target.value, idx)"
                     min="0"
                     max="9"
-                    type="range" 
-                    class="ranger">
+                    type="range">
             </div>
         </div>
         <div class="add-remove">
