@@ -76,19 +76,22 @@ export default {
 }
 .block {
     background-color: grey;
-    border: 1px solid transparent;
     height: 11.1%;
 }
 .water {
     background-image: url("../assets/water.gif");
-    background-size: cover; 
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .empty {
     border-color: grey;
 }
 .box {
-    background-color: brown;
-    border-color: black;
+    background-image: url("../assets/box.jpeg");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat:   no-repeat;
 }
 @media screen and (max-width: 768px) {
     .toolbar {
