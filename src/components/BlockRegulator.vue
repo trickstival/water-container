@@ -1,7 +1,7 @@
 <template>
     <div class="regulator">
         <div class="rangers">
-            <div v-for="(range, idx) in value" class="ranger">
+            <div v-for="(range, idx) in value" :key="idx" class="ranger">
                 <span class="counter">{{ range }}</span>
                 <input
                     :value="+range" 
