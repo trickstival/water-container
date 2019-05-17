@@ -45,11 +45,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.add-remove {
-    
-}
 .regulator {
-    padding-top: 40px;
     display: grid;
     grid-gap: 10px;
     grid-auto-flow: column;
@@ -62,9 +58,7 @@ export default {
     grid-auto-flow: column;
 }
 .ranger {
-    & > .counter {
-
-    }
+    padding-top: 30px;
     & > input {
         transform: rotate(-90deg);
         width: 80px;

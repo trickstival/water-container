@@ -1,4 +1,6 @@
-# chal
+# Water Container Simulator
+A simple simulation of water retainment
+Demo: [https://nifty-easley-7bb485.netlify.com/](https://nifty-easley-7bb485.netlify.com/)
 
 ## Project setup
 ```
