@@ -17,7 +17,7 @@ export default {
   },
   data () {
     return {
-      stdIn: '0214343000'
+      stdIn: '0214343050'
     }
   }
 }

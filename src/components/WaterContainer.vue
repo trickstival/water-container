@@ -80,8 +80,8 @@ export default {
     height: 11.1%;
 }
 .water {
-    background-color: blue;
-    border-color: blue;
+    background-image: url("../assets/water.gif");
+    background-size: cover; 
 }
 .empty {
     border-color: grey;
@@ -89,5 +89,11 @@ export default {
 .box {
     background-color: brown;
     border-color: black;
+}
+@media screen and (max-width: 768px) {
+    .toolbar {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
 }
 </style>
