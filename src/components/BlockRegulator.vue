@@ -1,13 +1,24 @@
 <template>
     <div class="regulator">
-        <div v-for="(range, idx) in value" class="ranger">
-            <input
-                :value="+range" 
-                @input="rangeInput($event.target.value, idx)"
-                min="0"
-                max="9"
-                type="range" 
-                class="ranger">
+        <div class="rangers">
+            <div v-for="(range, idx) in value" class="ranger">
+                <span class="counter">{{ range }}</span>
+                <input
+                    :value="+range" 
+                    @input="rangeInput($event.target.value, idx)"
+                    min="0"
+                    max="9"
+                    type="range" 
+                    class="ranger">
+            </div>
+        </div>
+        <div class="add-remove">
+            <button @click="input(value + '0')">
+                +
+            </button>
+            <button @click="input(value.substr(0, value.length - 1))">
+                -
+            </button>
         </div>
     </div>
 </template>
@@ -24,23 +35,39 @@ export default {
         rangeInput (range, idx) {
             let newRange = this.value.split('')
             newRange[idx] = range
-            this.$emit('input', newRange.join(''))
+            this.input(newRange.join(''))
+        },
+        input (newVal) {
+            this.$emit('input', newVal)
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.add-remove {
+    
+}
 .regulator {
     padding-top: 40px;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 50px;
+}
+.rangers {
+    overflow-x: auto;
+    overflow-y: hidden;
     display: grid;
     grid-auto-flow: column;
 }
 .ranger {
+    & > .counter {
+
+    }
     & > input {
         transform: rotate(-90deg);
         width: 80px;
     }
-    width: 0;
 }
 </style>
